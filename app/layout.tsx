@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${geist.variable} ${manrope.variable}`}>
-      <body>
+      <body className="bg-[#09090b]">
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
