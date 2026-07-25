@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Manrope } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/smooth-scroll";
+import { NeuralNoise } from "@/components/ui/neural-noise";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
@@ -17,8 +18,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${geist.variable} ${manrope.variable}`}>
-      <body className="bg-[#09090b]">
-        <SmoothScroll>{children}</SmoothScroll>
+      <body className="relative min-h-screen bg-[#09090b]">
+        <NeuralNoise color={[0.68, 0.26, 0.96]} opacity={0.16} speed={0.0012} />
+        <div className="relative z-10">
+          <SmoothScroll>{children}</SmoothScroll>
+        </div>
       </body>
     </html>
   );
