@@ -168,11 +168,6 @@ export default function Home() {
         <Reveal delay={0.1} className="mt-12">
           <article className="project-card">
             <div className="project-media">
-              <div className="project-badges">
-                <span className="project-badge">AI Planner</span>
-                <span className="project-badge">Full Stack</span>
-                <span className="project-badge">Travel Platform</span>
-              </div>
               <Image src="/projects/wanderlust/home.png" alt="WanderLust-AI home page" fill priority className="project-image" sizes="(max-width: 900px) 100vw, 66vw" />
             </div>
             <div className="project-info">
